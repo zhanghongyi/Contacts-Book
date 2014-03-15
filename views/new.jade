@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	h2=pagetitle
+	p Firstnamd and lastname is required. This can not deal with err.
+	form(action='/hongyi-contact/new', method='post')
+		p Firstname: 
+			input(type='text', name='first', placeholder='firstname')
+		p Lastname: 
+			input(type='text', name='last', placeholder='lastname')
+		p Email:
+			input(type='text', name='email')
+		p Phone: 
+			input(type='text', name='phone')
+		p Notes: 
+			input(type='text', name='notes')
+		p
+			input(type='submit', value='add')
+	a(href="/hongyi-contact/") Back to home

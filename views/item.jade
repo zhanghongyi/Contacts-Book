@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	h2 Contact Information
+	table
+		tr
+			td Firstname:
+			td=data.firstname
+		tr
+			td Lastname:
+			td=data.lastname
+		tr
+			td Email:
+			td=data.email
+		tr
+			td Phone:
+			td=data.phone
+		tr
+			td Notes:
+			td=data.notes
+	a(href='/hongyi-contact/') Back to home
+	| |
+	a(href='/hongyi-contact/edit/#{data.id}') edit
+	| |
+	a(href='/hongyi-contact/delete/#{data.id}') delete
