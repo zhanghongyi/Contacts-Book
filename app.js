@@ -27,12 +27,15 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/hongyi-contact', routes.list);
+app.post('/hongyi-contact/', routes.add);
 app.get('/hongyi-contact/new', routes.showadd);
 app.post('/hongyi-contact/new', routes.add);
-app.get('/hongyi-contact/item/:id', routes.item);
-app.get('/hongyi-contact/edit/:id', routes.edit);
-app.post('/hongyi-contact/edit/:id', routes.update);
-app.get('/hongyi-contact/delete/:id', routes.delete);
+app.get('/hongyi-contact/:id', routes.item);
+app.put('/hongyi-contact/:id', routes.update);
+app.get('/hongyi-contact/:id/edit', routes.edit);
+app.post('/hongyi-contact/:id/edit', routes.update);
+app.get('/hongyi-contact/:id/delete', routes.delete);
+app.delete('/hongyi-contact/:id', routes.deleteit);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

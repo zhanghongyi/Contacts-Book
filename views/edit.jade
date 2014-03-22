@@ -3,7 +3,7 @@ extends layout
 block content
 	h2=pagetitle
 	p Firstnamd and lastname is required. This can not deal with err.
-	form(action='/hongyi-contact/edit/#{data.id}', method='post')
+	form(action='/hongyi-contact/#{data.id}/edit', method='post')
 		p Firstname: 
 			input(type='text', name='first', value='#{data.firstname}')
 		p Lastname: 
